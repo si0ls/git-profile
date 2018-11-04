@@ -1,0 +1,54 @@
+{
+  "name": "git-profile",
+  "version": "1.0.0",
+  "description": "A git utility to manage profiles.",
+  "engines": {
+    "node": ">=8"
+  },
+  "bin": {
+    "git-pm": "cli.js"
+  },
+  "scripts": {
+    "lint": "eslint cli.js \"src/**/*.js\"",
+    "fix": "prettier-eslint --write cli.js \"src/**/*.js\"",
+    "test": "jest"
+  },
+  "pre-commit": [
+    "lint",
+    "fix",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/si0ls/git-profile.git"
+  },
+  "keywords": [
+    "git-pm",
+    "git-profile",
+    "git profile manager",
+    "si0ls",
+    "commit"
+  ],
+  "author": "Louis SCHNEIDER <si0lsfr@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/si0ls/git-profile/issues"
+  },
+  "homepage": "https://github.com/si0ls/git-profile#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.14.3",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testPathDirs": [
+      "./tests"
+    ]
+  },
+  "private": false
+}
